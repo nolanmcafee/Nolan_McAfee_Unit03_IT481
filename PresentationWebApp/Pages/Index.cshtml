@@ -1,0 +1,71 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 25%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+        background-color: #ddd;
+    }
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #0012C0;
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #count {
+        font-family: Arial, Arial, Helvetica, sans-serif, sans-serif;
+        font-size: 32px;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">IT481 - Unit 2 - Assignment</h1>
+
+    @{ var customerCount = Model.customerCount; }
+    <p id="count">Total Number of Customers: @customerCount </p>
+
+    <table class="table" id="customers">
+        <thead>
+            <tr>
+                <th>Customer Company Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customerCompanyName in Model.customerCompanyNames)
+            {
+                <tr>
+                    <td style="height:15px;">@customerCompanyName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

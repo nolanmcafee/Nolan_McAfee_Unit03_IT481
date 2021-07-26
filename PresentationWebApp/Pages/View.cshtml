@@ -1,0 +1,25 @@
+﻿@page
+@model PresentationWebApp.Pages.ViewModel
+@{ var tableCount = Model.tableCount;
+    var tableRows = Model.tableRows;
+}
+
+<div>
+    <p id="count">Total Number of Customers: @tableCount </p>
+
+    <table class="table" id="customers">
+        <thead>
+            <tr>
+                <th>Customer Company Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tableRow in tableRows)
+            {
+                <tr>
+                    <td style="height:15px;">@tableRow</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

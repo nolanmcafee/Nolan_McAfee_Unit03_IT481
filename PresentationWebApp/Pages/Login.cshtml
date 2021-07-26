@@ -1,0 +1,70 @@
+﻿@page
+@model PresentationWebApp.Pages.LoginModel
+@{
+}
+
+
+
+
+
+<!--
+<form method="post">
+    <input type="submit" value="Submit" />
+    <a asp-page="/Error" asp-route-ID="HelloWorld" class="btn btn-primary m-1">View</a>
+</form>
+-->
+
+<!--<form method="post">-->
+@using (Html.BeginForm("SubmitForm", "Login"))
+{
+    <div class="row justify-content-center m-3">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Enter Credentials</h1>
+                </div>
+
+                <div class="card-body text-center">
+                    <!--<label for="txtUsername">Username: </label><input type="text" id="txtUsername" name="Username" />-->
+                    @Html.TextBox("Username")
+
+                    <br /><br />
+
+                    <!--<label for="txtPassword">Password: </label><input type="text" id="txtPassword" name="Password" />-->
+                    @Html.TextBox("Password")
+
+                    <br /><br />
+
+                    <!--<label for="selTable">View Table: </label><select id="selTable" name="Table"><option value="customers">Customers</option><option value="employees">Employees</option><option value="orders">Orders</option></select>-->
+                    @Html.TextBox("Table")
+
+                </div>
+
+                <div class="card-footer text-center">
+                    <!--<input type="submit" value="Submit" />-->
+                    <!--<a asp-page="/Error" asp-route-ID="HelloWorld" class="btn btn-primary m-1">View</a>-->
+                    <!--<a asp-page="/View" asp-route-ID="" class="btn btn-primary m-1">Submit</a>-->
+                    <!--<a asp-page="/Password" asp-route-txtUsername class="btn btn-primary m-1">Submit</a>-->
+                    <input class="button" id="submit" type="submit" value="Submit" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<!--
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>DB Access Portal</title>
+</head>
+<body>
+    <form method="post">
+        <di
+    </form>
+</body>
+</html>
+-->
